@@ -8,6 +8,7 @@ function PlanetList({ planets }) {
         <PlanetItem
           name={planet.name}
           population={planet.population}
+          terrain={planet.terrain}
           key={index}
         />
       ))}

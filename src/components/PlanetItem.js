@@ -1,10 +1,11 @@
 import React from 'react';
 
-function PlanetItem({ name, population }) {
+function PlanetItem({ name, population, terrain }) {
   return (
-    <div>
-      <h1>{name}</h1>
-      <h2>{population}</h2>
+    <div className='card'>
+      <h3>{name}</h3>
+      <p>Population: {population}</p>
+      <p>Terrain: {terrain}</p>
     </div>
   );
 }
