@@ -2,13 +2,13 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import PeopleList from './PeopleList';
 
-const fetchPeople = async () => {
+const fetchPeople = async (key, greeting) => {
   const res = await fetch('https://swapi.dev/api/people');
   return res.json();
 };
 
 function People() {
-  const { data, status } = useQuery('People', fetchPeople);
+  const { data, status } = useQuery(['People', 'hello ninjas'], fetchPeople);
   console.log(data);
 
   return (
